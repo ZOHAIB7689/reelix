@@ -1,7 +1,6 @@
 import {NextRequest , NextResponse} from "next/server";
 import { connectToDatabase } from "@/lib/db";
 import User from "@/models/user";
-import { error } from "console";
 
 
 export async function  POST (request:NextRequest) {
@@ -29,7 +28,7 @@ export async function  POST (request:NextRequest) {
 
         return NextResponse.json(
             {message: "User registered successfully"},
-            {status:200}
+            {status:201}
         )
 
 
